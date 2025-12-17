@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0b1020" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Zorica 47" />
+
+  <title>Zorica • 47</title>
+
+  <link rel="manifest" href="./manifest.json" />
+  <link rel="icon" href="./icon.png" type="image/png" />
+  <link rel="apple-touch-icon" href="./icon.png" />
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+  <div class="app">
+    <header class="top">
+      <div class="counter" aria-label="Brojač godina">
+        <div class="pill">
+          <span class="label">Godina:</span>
+          <span id="done" class="num">0</span>
+          <span class="sep">/</span>
+          <span id="total" class="num">47</span>
+        </div>
+      </div>
+    </header>
+
+    <main class="stage" aria-label="Mini igra: ugasi 47 svećica">
+      <div class="bgGlow" aria-hidden="true"></div>
+
+      <div class="scene" id="scene">
+        <div class="candleWrap" id="candleWrap" aria-label="Svećica">
+          <div class="candle" id="candle">
+            <div class="waxHighlight"></div>
+            <div class="waxShade"></div>
+
+            <div class="wick" aria-hidden="true"></div>
+
+            <button id="flameBtn" class="flameBtn" type="button" aria-label="Klikni na plamen da ugasiš svećicu">
+              <span class="flame" id="flame"></span>
+              <span class="hitRing" aria-hidden="true"></span>
+            </button>
+
+            <div class="candleShadow" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+
+      <div id="final" class="final isHidden" aria-hidden="true">
+        <div class="finalCard">
+          <div class="titleRow">
+            <div class="big">❤️</div>
+            <h1>Srećan rođendan, mama!</h1>
+          </div>
+          <p>
+            Želim ti zdravlje, mir, radost i puno lepih trenutaka. ✨
+          </p>
+          <div class="finalBtns">
+            <button id="finalAgainBtn" class="btn" type="button">Duvaj ga opet</button>
+          </div>
+        </div>
+
+        <div class="hearts" id="hearts" aria-hidden="true"></div>
+      </div>
+    </main>
+  </div>
+
+  <script src="./app.js"></script>
+</body>
+</html>
